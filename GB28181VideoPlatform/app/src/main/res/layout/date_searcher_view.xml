@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@color/view_color"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <RelativeLayout
+            android:onClick="showCalendarView"
+            android:background="@drawable/frame_layout"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_gravity="center"
+            android:layout_width="240dp"
+            android:layout_height="36dp">
+
+            <TextView
+                android:id="@+id/search_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_start"
+                android:padding="@dimen/dimen_5dp"
+                android:layout_marginStart="@dimen/dimen_5dp"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:textColor="#81504f4f" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_toEndOf="@id/search_start_time"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/line"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_toRightOf="@id/line"
+                android:id="@+id/search_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/time_end"
+                android:textSize="14sp"
+                android:padding="@dimen/dimen_5dp"
+                android:textColor="#81504f4f" />
+
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/calendar"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_width="73dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:text="@string/search_btn"
+            android:onClick="search"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/setting_btn_view"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/calendar_layout"
+            android:onClick="close"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/frame_layout"
+                android:padding="2dp"
+                android:layout_width="270dp"
+                android:layout_height="205dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow_left"
+                        android:onClick="lastMonth"/>
+
+                    <TextView
+                        android:id="@+id/current_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="50dp"
+                        android:background="@drawable/arrow_right"
+                        android:onClick="nextMonth"/>
+
+                </RelativeLayout>
+
+                <com.haibin.calendarview.CalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    app:calendar_height="30dp"
+                    app:week_bar_height="@dimen/dimen_20dp"
+                    app:current_month_lunar_text_color="#CFCFCF"
+                    app:current_month_text_color="#4f4f4f"
+                    app:day_text_size="15sp"
+                    app:max_select_range="-1"
+                    app:min_select_range="-1"
+                    app:min_year="2004"
+                    app:month_view="com.example.gb28181_videoplatform.widget.CustomRangeMonthView"
+                    app:month_view_show_mode="mode_only_current"
+                    app:other_month_text_color="#e1e1e1"
+                    app:scheme_text="假"
+                    app:scheme_text_color="#333"
+                    app:scheme_theme_color="#333"
+                    app:select_mode="range_mode"
+                    app:selected_text_color="#fff"
+                    app:selected_theme_color="@color/activity_title"
+                    app:week_background="#fff"
+                    app:week_text_color="#111"
+                    app:current_day_text_color="@color/blue_c"
+                    app:week_view="com.example.gb28181_videoplatform.widget.CustomRangeWeekView"
+                    app:year_view_day_text_color="#333333"
+                    app:year_view_day_text_size="9sp"
+                    app:year_view_month_text_color="#ff0000"
+                    app:year_view_month_text_size="20sp"
+                    app:year_view_scheme_color="#f17706" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:background="#FFF"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/time_list"
+            android:visibility="gone"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:scrollbars="vertical"
+            android:scrollbarSize="3dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbarThumbVertical="@color/blue_c">
+        </android.support.v7.widget.RecyclerView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

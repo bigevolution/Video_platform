@@ -1,0 +1,47 @@
+<configuration debug="true">
+    <property name="LOG_DIR" value="/mnt/sdcard/ICL/DisplayAgent" />
+
+    <!-- Create a logcat appender -->
+    <appender name="LOG_CAT" class="ch.qos.logback.classic.android.LogcatAppender">
+        <encoder>
+            <pattern> [%file:%M:%line] - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- Rolling Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- File location -->
+        <file>${LOG_DIR}/log.txt</file>
+
+        <!-- Only log error messages to log file -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+
+        <!-- Rolling Policy -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/log.%i.txt</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>20</maxIndex>
+        </rollingPolicy>
+
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>10MB</maxFileSize>
+        </triggeringPolicy>
+
+        <!-- Message encoder -->
+        <encoder>
+            <!--<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>-->
+            <pattern>%date %-5relative [%thread] %-5level %logger{36} [%file:%M:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Log level - change this to ERROR on release -->
+    <root level="DEBUG">
+        <appender-ref ref="LOG_CAT"/>
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>

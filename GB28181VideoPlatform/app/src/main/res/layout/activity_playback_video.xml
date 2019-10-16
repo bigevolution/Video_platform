@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/view_color"
+    tools:context="com.example.gb28181_videoplatform.activity.PlaybackVideoActivity">
+
+    <RelativeLayout
+        android:id="@+id/back_title_layout"
+        android:layout_width="match_parent"
+        android:background="@color/activity_title"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/video_playback"
+            android:padding="@dimen/dimen_10dp"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:onClick="back"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/back"
+                android:layout_marginStart="@dimen/dimen_15dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_below="@id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3f706d6d"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/back_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_200dp">
+
+        <SurfaceView
+            android:id="@+id/back_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--<ImageView-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:background="@mipmap/video_play"/>-->
+
+        <ImageView
+            android:id="@+id/back_fullScreen_view"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@mipmap/full_screen"/>
+
+        <ImageView
+            android:id="@+id/back_screenshot_view"
+            android:layout_above="@id/fullScreen_view"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_50dp"
+            android:background="@mipmap/screenshot"/>
+
+        <include
+            layout="@layout/video_land_layout"/>
+
+        <RelativeLayout
+            android:id="@+id/back_buffer_layout"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:alpha="0.3"/>
+
+            <ImageView
+                android:id="@+id/back_gif_view"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/buffer_loading"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/back_replay_layout"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:alpha="0.3"/>
+
+            <TextView
+                android:id="@+id/back_replay_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:text="@string/replay_text"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:drawableStart="@mipmap/replay"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/stop"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:background="@mipmap/stop"
+            android:onClick="bofang"/>
+
+        <ImageView
+            android:id="@+id/play"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:background="@mipmap/play"
+            android:onClick="bofang"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:id="@+id/text_prograss"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:layout_below="@id/progress"
+            android:layout_alignStart="@id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00:00--00:00:00:00" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/null_layout"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/no_video"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prograss_layout"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/blue_c"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/date_searcher_view"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

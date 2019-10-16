@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.gb28181_videoplatform.activity.NVRAisleDeviceActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:background="#F2F1F1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp">
+
+        <TextView
+            android:id="@+id/device_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp"
+            android:textColor="@color/activity_title"
+            android:drawableEnd="@mipmap/arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:text="@string/device_state_select"/>
+
+        <TextView
+            android:id="@+id/device_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp"
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:layout_toEndOf="@id/device_state"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/activity_title"
+            android:drawableEnd="@mipmap/arrow_down"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:text="@string/device_type_select"/>
+
+        <TextView
+            android:id="@+id/refresh_view"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:drawableEnd="@mipmap/refresh"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/activity_title"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_height="wrap_content"
+            android:text="@string/refresh"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:background="#DEDEDE"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/device_list"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <ImageView
+            android:id="@+id/no_data"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/no_device"/>
+
+        <include
+            android:visibility="gone"
+            layout="@layout/flow_layout_state" />
+
+        <include
+            android:visibility="gone"
+            layout="@layout/flow_layout_type" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/refreshing_layout"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:alpha="0.4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:text="刷新中，请稍等。。。"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

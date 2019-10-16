@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flow_type_layout"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ipc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/black"
+                android:text="IPC摄像头：" />
+
+            <com.example.gb28181_videoplatform.widget.flow.FlowTagLayout
+                android:id="@+id/ipc_flow_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/smart_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/black"
+                android:text="智能设备：" />
+
+            <com.example.gb28181_videoplatform.widget.flow.FlowTagLayout
+                android:id="@+id/smart_flow_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nvr_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/black"
+                android:text="NVR设备：" />
+
+            <com.example.gb28181_videoplatform.widget.flow.FlowTagLayout
+                android:id="@+id/nvr_flow_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d8d8d8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_type_reset"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="重置"
+                android:textColor="#333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_type_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#3e9fed"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="确定"
+                android:textColor="#fefefe"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d8d8d8" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/close_type_view"
+        android:layout_below="@id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5" />
+
+</RelativeLayout>

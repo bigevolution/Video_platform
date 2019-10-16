@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">多维感知指挥调度</string>
+    <string name="toast_message">Toast message</string>
+
+    //登陆界面
+    <string name="login">登录</string>
+    <string name="login_title">多维感知指挥调度</string>
+    <string name="toast_login_account">请输入账号</string>
+    <string name="toast_login_password">请输入密码</string>
+    <string name="exit_click_again">再按一次退出程序</string>
+
+    //设备页面
+    <string name="device">设备</string>
+    <string name="tab_ALL">全部</string>
+    <string name="tab_IPC">IPC摄像头</string>
+    <string name="tab_Intelligent">智能设备</string>
+    <string name="tab_NVR">NVR网络录像机</string>
+    <string name="search_hint">请输入要查询的设备名称</string>
+    <string name="search_btn">搜索</string>
+    <string name="search_result">搜索结果</string>
+    <string name="device_name">名称：</string>
+    <string name="device_type">类型：</string>
+    <string name="device_state">状态：</string>
+    <string name="device_type_select">类型</string>
+    <string name="device_state_select">状态</string>
+    <string name="device_state_online">在线</string>
+    <string name="device_state_offline">离线</string>
+    <string name="playback_btn">录像回放</string>
+    <string name="aisle">通道：</string>
+    <string name="aisle_btn">通道</string>
+    <string name="refresh">刷新</string>
+    <string name="device_offline">该设备已下线，无法预览</string>
+    <string name="nvr_offline">该设备已离线，无法查看</string>
+    <string name="own_device">无法查看自己的设备哦</string>
+
+    //视频页面
+    <string name="video_live">实时视频</string>
+    <string name="farAndNear">远近调节</string>
+    <string name="PTZ_control">云台控制</string>
+    <string name="replay_text">重新播放</string>
+    <string name="video_device_name">设备名称：</string>
+    <string name="video_device_id">国标ID：</string>
+    <string name="video_device_address">设备地址：</string>
+    <string name="video_playback">录像回放</string>
+    <string name="time_start">开始时间</string>
+    <string name="time_end">结束时间</string>
+    <string name="time_search_point">请先选择时间进行搜索</string>
+    <string name="time_view_point">请确认时间选择完成</string>
+    <string name="time_point">请先选择开始时间！</string>
+    <string name="time_renew">请重新选择结束时间！</string>
+    <string name="time_end_point">结束时间不能小于开始时间，请重选！</string>
+    <string name="time_end_point_today">结束时间不能大于今天，请重选！</string>
+    <string name="time_start_point_today">开始时间不能大于今天，请重选！</string>
+    <string name="playback_null">暂无视频，请输入时间段搜索您想看的录像</string>
+    <string name="playback_time">时间：</string>
+
+    //用户侧滑栏
+    <string name="user_setting">设置</string>
+    <string name="user_pwd">修改密码</string>
+    <string name="user_exit">退出</string>
+    <string name="exit_account">退出账号</string>
+    <string name="exit_hint">确定要退出当前账号吗？</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+
+    //设置页面
+    <string name="title_setting">设置</string>
+    <string name="sip_setting">SIP服务配置</string>
+    <string name="web_setting">管理平台配置</string>
+    <string name="sip_ip">SIP服务器IP：</string>
+    <string name="sip_port">SIP服务器端口：</string>
+    <string name="sip_id">SIP服务器国标ID：</string>
+    <string name="sip_pwd">SIP服务器密码：</string>
+    <string name="local_id">本地国标ID：</string>
+    <string name="local_port">本地端口：</string>
+    <string name="heart_time">心跳间隔(ms)：</string>
+    <string name="payload_type">负载类型(H264/98，PS/96)：</string>
+    <string name="web_ip">WEB服务器IP：</string>
+    <string name="web_port">WEB服务器端口：</string>
+    <string name="socket_port">WEB-Socket端口：</string>
+    <string name="sip_ip_text">请输入SIP服务器IP</string>
+    <string name="sip_port_text">请输入SIP服务器端口</string>
+    <string name="sip_id_text">请输入SIP服务器国标ID</string>
+    <string name="sip_pwd_text">请输入SIP服务器密码</string>
+    <string name="local_id_text">请输入本地国标ID</string>
+    <string name="local_port_text">请输入本地端口</string>
+    <string name="heart_time_text">请输入心跳间隔</string>
+    <string name="payload_type_text">请输入负载类型</string>
+    <string name="web_ip_text">请输入WEB服务器IP</string>
+    <string name="web_port_text">请输入WEB服务器端口</string>
+    <string name="socket_port_text">请输入WEB-Socket端口</string>
+    <string name="save_setting">保存</string>
+
+    //密码页面
+    <string name="title_pwd">修改密码</string>
+    <string name="old_pwd">旧密码：</string>
+    <string name="new_pwd">新密码：</string>
+    <string name="new_pwd_again">新密码：</string>
+    <string name="old_pwd_text">请输入旧密码</string>
+    <string name="new_pwd_text">请输入新密码</string>
+    <string name="new_pwd_again_text">请再次输入新密码</string>
+    <string name="confirm_changes">确认修改</string>
+
+</resources>

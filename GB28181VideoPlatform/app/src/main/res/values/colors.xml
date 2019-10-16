@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#008577</color>
+    <color name="gray">#BFBFBF</color>
+    <color name="red09">#FF5F5F</color>
+    <color name="white">#ffffff</color>
+    <color name="colorDivison">#33aaaaaa</color>
+    <color name="blue_c">#43a3f4</color>
+    <color name="login_bg">#00173F</color>
+    <color name="login_hint">#5E6C84</color>
+    <color name="colorToastError">#F27474</color>
+    <color name="black">#000000</color>
+    <color name="white_alpha">#F2F2F2</color>
+    <color name="title_color">#E6EBF5</color>
+    <color name="view_color">#F2F2F2</color>
+    <color name="line_color">#F2F3F3</color>
+    <color name="activity_title">#2196F3</color>
+    <color name="app_bg">#DEDEDE</color>
+    <color name="device_text">#9E9E9E</color>
+    <color name="set_hint_color">#A3A3A3</color>
+</resources>

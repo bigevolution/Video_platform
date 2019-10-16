@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/live_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="11dp"
+        android:background="@mipmap/back_land"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/stretch_view"
+        android:layout_alignParentEnd="true"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="end"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dimen_5dp"
+        android:background="@mipmap/stretch"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/landSpace_layout"
+        android:background="@color/black"
+        android:alpha="0.5"
+        android:clickable="true"
+        android:layout_marginTop="11dp"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_width="130dp"
+        android:layout_height="290dp">
+
+        <ImageView
+            android:id="@+id/shrink_view"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="11dp"
+            android:background="@mipmap/shrink"/>
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/adjust_land_add"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/add"/>
+
+            <ImageView
+                android:id="@+id/adjust_land_reduce"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@mipmap/reduce"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/direction_land_view"
+                android:layout_centerInParent="true"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@mipmap/direction_land_view"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/screenshot_land_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="11dp"
+        android:background="@mipmap/screenshot_land"/>
+
+</RelativeLayout>

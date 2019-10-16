@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_120dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@color/blue_c"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_20dp"
+        android:text="@string/app_name"
+        android:layout_marginBottom="@dimen/dimen_20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#38000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_setting"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:padding="@dimen/dimen_15dp"
+        android:drawableEnd="@mipmap/back_reverse"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#38000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_pwd"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:padding="@dimen/dimen_15dp"
+        android:drawableEnd="@mipmap/back_reverse"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#38000000"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/dimen_160dp"
+            android:layout_height="wrap_content"
+            android:text="@string/user_exit"
+            android:textColor="#e16c6c"
+            android:background="@drawable/exit_btn"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

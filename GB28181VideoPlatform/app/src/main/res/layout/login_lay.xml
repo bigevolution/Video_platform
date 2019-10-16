@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loginpage"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/login_bg">
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="132dp"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:paddingEnd="5dp"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_round"
+            android:layout_height="50dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/username"
+                android:textSize="20sp"
+                android:textColor="#ff4587f7"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:drawableLeft="@mipmap/ic_account"
+                android:drawablePadding="@dimen/dimen_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:inputType="textPersonName"
+                android:background="@null"
+                android:textCursorDrawable="@drawable/bg_input_cursor"
+                android:paddingBottom="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_round"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_height="50dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:textColorHint="#c5c5c5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleDrawable="@drawable/selector_password_show_or_hide">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/password"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:drawablePadding="@dimen/dimen_5dp"
+                    android:drawableStart="@mipmap/ic_password"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:background="@null"
+                    android:textCursorDrawable="@drawable/bg_input_cursor"
+                    android:paddingBottom="2dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/rem_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/Remember_CheckBox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="记住密码"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="@dimen/dimen_220dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@mipmap/login_btn"
+                android:textSize="16sp"
+                android:text="登 录" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

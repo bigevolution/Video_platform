@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="50dp">
+
+    <LinearLayout
+        android:background="#F2F1F1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp">
+
+        <TextView
+            android:id="@+id/device_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp"
+            android:textColor="@color/activity_title"
+            android:drawableEnd="@mipmap/arrow_down"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:text="@string/device_state_select"/>
+
+        <TextView
+            android:id="@+id/device_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp"
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/activity_title"
+            android:drawableEnd="@mipmap/arrow_down"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:text="@string/device_type_select"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:background="#DEDEDE"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/device_list"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <ImageView
+            android:id="@+id/no_data"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/no_device"/>
+
+        <include
+            android:visibility="gone"
+            layout="@layout/flow_layout_state" />
+
+        <include
+            android:visibility="gone"
+            layout="@layout/flow_layout_type" />
+
+    </RelativeLayout>
+
+</LinearLayout>

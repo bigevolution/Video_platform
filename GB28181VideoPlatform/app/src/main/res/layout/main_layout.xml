@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:background="@color/activity_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="@string/device"
+                android:padding="@dimen/dimen_10dp"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/person_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/people"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_15dp"/>
+
+            <ImageView
+                android:id="@+id/search_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/search" />
+
+            <View
+                android:layout_below="@id/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#3f706d6d"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/activity_title"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/activity_title"
+            app:tabIndicatorHeight="3dp">
+
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fragment_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.gb28181_videoplatform.widget.ClearEditText
+            android:id="@+id/text_search"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:textColor="#000"
+            android:drawableStart="@mipmap/search_small"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@null"
+            android:hint="@string/search_hint"
+            android:textColorHint="@color/white"
+            android:background="@drawable/search_edit_round"
+            android:padding="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

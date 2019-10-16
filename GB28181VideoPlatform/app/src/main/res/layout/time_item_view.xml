@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen_10dp"
+    android:layout_margin="@dimen/dimen_5dp"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/time_item"
+    android:background="@drawable/frame_layout"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#81504f4f"
+        android:text="@string/playback_time"/>
+
+    <TextView
+        android:id="@+id/starthour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2019-09-08 01:21:30"/>
+    <TextView
+        android:id="@+id/gang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_5dp"
+        android:layout_marginLeft="@dimen/dimen_5dp"
+        android:text="—" />
+    <TextView
+        android:id="@+id/endhour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2019-09-08 01:51:30"/>
+
+
+</LinearLayout>

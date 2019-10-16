@@ -1,0 +1,19 @@
+#pragma once
+
+//播放参数结构体
+typedef struct {
+	char* localip;	 //服务端ip
+	int localPort;   //服务端口号
+	int in_width;    //视频宽度
+	int in_height;	 //视频高度			 
+	int frame_rate;  //视频帧率
+	long bit_rate;   //视频比特率
+	int ssrc;		 //同步信源标识
+}UserArguments;
+
+//拉流枚举类型
+enum PullStreamType
+{
+	PULL_STREAM_H264, //h264流 
+	PULL_STREAM_PS	  //ps流
+};

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/shape_corner"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    android:layout_marginStart="@dimen/dimen_10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:id="@+id/layout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:background="@drawable/round_image_view"
+            android:id="@+id/video_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100dp"/>
+
+        <ImageView
+            android:id="@+id/video_play"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/camera"/>
+
+    </RelativeLayout>
+
+    <com.example.gb28181_videoplatform.widget.RoundCornerImageView
+        android:id="@+id/video_play1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/dimen_180dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:maxEms="18"
+            android:ellipsize="end"
+            android:text="@string/device_name"/>
+
+        <TextView
+            android:id="@+id/device_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/device_name"
+            android:layout_marginBottom="8dp"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:text="@string/device_type"/>
+
+        <TextView
+            android:id="@+id/device_state"
+            android:layout_below="@id/device_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:text="@string/device_state"/>
+
+        <Button
+            android:id="@+id/base_playback_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:textSize="12sp"
+            android:textColor="@color/activity_title"
+            android:background="@drawable/playback_btn_online"
+            android:visibility="gone"
+            android:text="@string/playback_btn"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:id="@+id/aisle_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:textColor="@color/activity_title"
+            android:background="@drawable/playback_btn_online"
+            android:text="@string/aisle_btn"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

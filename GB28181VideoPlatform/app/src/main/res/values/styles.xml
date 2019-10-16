@@ -1,0 +1,82 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="Base.Theme.AppCompat">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <!--<item name="metaButtonBarStyle">@style/ButtonBar</item>-->
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogStyle</item>
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/red09</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Material.Light.Dialog.Alert"/>
+
+    <style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:divider">@drawable/ic_list_divider</item>
+        <item name="android:dividerHeight">@dimen/division_line</item>
+        <item name="android:listDivider">@drawable/ic_list_divider</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back_white_24dp</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="Remember_CheckBox" parent="@android:style/Widget.Material.CompoundButton.CheckBox">
+        <item name="android:colorControlActivated">#2684FF</item>
+        <item name="android:colorControlNormal">@color/gray</item>
+    </style>
+
+    <style name="WelcomeActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 通过windowBackground可以设置背景色、背景图片、能解析出图片的XML文件等-->
+        <item name="android:windowBackground">@drawable/layer_launcher</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="PermissionBlueStyle">
+    <item name="PermissionTitleColor">@color/black</item>
+    <item name="PermissionMsgColor">@color/black</item>
+    <item name="PermissionItemTextColor">@color/black</item>
+    <item name="PermissionButtonBackground">@drawable/shape_btn</item>
+    <item name="PermissionBackround">@drawable/shape_bg_white</item>
+    <item name="PermissionButtonTextColor">@android:color/white</item>
+</style>
+
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>
