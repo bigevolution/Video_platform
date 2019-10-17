@@ -11,7 +11,7 @@ import com.example.gb28181_videoplatform.R;
 import com.example.gb28181_videoplatform.util.MyUtil;
 
 /**
- * Created by 吴迪 on 2019/8/1.
+ * Created by 吴迪 on 2019/08/01.
  * 基类Activity
  */
 public abstract class BaseActivity extends Activity {
